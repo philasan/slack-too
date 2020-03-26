@@ -1,3 +1,7 @@
+a:visited {
+  color: rgb(18, 100, 163);
+}
+
 button {
   border: none;
   background: inherit;
@@ -32,6 +36,7 @@ ul {
 .app-container {
   display: flex;
   flex-grow: 1;
+  overflow: auto;
 }
 
 .sidebar {

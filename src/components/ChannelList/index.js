@@ -18,15 +18,16 @@ function ChannelList({ channels }) {
 
   let channelsElements = channels.map((channel, index) => {
     let style = classNames(
-      'channel',
-      { 'channel--selected': selectedChannelIndex === index },
+      'sidebar-channel',
+      { 'sidebar-channel--selected': selectedChannelIndex === index },
     );
     return (
       <li
+        key={index}
         className={style}
         onClick={() => toggleSelectedChannelIndex(index)}
       >
-        <span className="channel-name">{channel.name}</span>
+        <span className="sidebar-channel-name">{channel.name.replace('#', '')}</span>
       </li>
     );
   });
@@ -38,8 +39,8 @@ function ChannelList({ channels }) {
   );
 
   let channelsListStyle = classNames(
-    "channels-list",
-    { "channels-list--collapsed": collapse },
+    "sidebar-channels-list",
+    { "sidebar-channels-list--collapsed": collapse },
   );
 
   return (
