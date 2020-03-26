@@ -113,72 +113,18 @@
   overflow: auto;
 }
 
-.channel-message {
-  display: flex;
-  padding: 8px 20px;
-}
-
-.channel-message:hover {
-  background-color: rgb(245, 245, 245);
-}
-
-.channel-message__gutter {
-  min-width: 36px;
-  padding-right: 8px;
-  text-align: right;
-}
-.channel-message--continued .channel-message__gutter {
-  min-height: 0;
-}
-.channel-message--continued .channel-message__ampm {
-  display: none;
-}
-
-.channel-message__userImg {
-  height: 36px;
-  width: 36px;
-  background-color: rgb(245, 245, 245);
-  border-radius: 2px;
-}
-
-.channel-message__username {
-  font-size: 15px;
-  font-weight: 900;
-  padding-right: 7px;
-}
-
-.channel-message__timestamp {
-  font-size: 12px;
-  line-height: 17px;
-  font-weight: 400;
-  color: rgb(97, 96, 97);
-}
-
-.channel-message__timestamp--onHover {
-  display: none;
-}
-
-.channel-message:hover .channel-message__timestamp--onHover {
-  display: block;
-}
-
-.channel-message__text {
-  color: rgb(29, 28, 29);
-  font-size: 15px;
-  font-weight: 400;
-}
-
 .channel-messages__date-divider {
   display: flex;
   justify-content: center;
-  border-top: 1px solid rgb(97, 96, 97);;
-  margin-top: 16px;
-  margin-bottom: -16px;
+  border-top: 1px solid #CCC;
+  margin-top: 20px;
+  margin-bottom: -10px;
 }
 
 .channel-messages__date-label {
-  border: 1px solid rgb(97, 96, 97);;
-  border-radius: 16px;
+  border: 1px solid #CCC;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px 0 rgba(100, 100, 100, .1);
   padding: 8px;
   position: relative;
   top: -50%;

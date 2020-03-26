@@ -1,0 +1,54 @@
+.channel-message {
+  display: flex;
+  padding: 8px 20px;
+}
+
+.channel-message:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.channel-message__gutter {
+  min-width: 36px;
+  padding-right: 8px;
+  text-align: right;
+}
+.channel-message--continued .channel-message__gutter {
+  min-height: 0;
+}
+.channel-message--continued .channel-message__ampm {
+  display: none;
+}
+
+.channel-message__userImg {
+  height: 36px;
+  width: 36px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 2px;
+}
+
+.channel-message__username {
+  font-size: 15px;
+  font-weight: 900;
+  padding-right: 7px;
+}
+
+.channel-message__timestamp {
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 400;
+  color: rgb(97, 96, 97);
+}
+
+.channel-message__timestamp--onHover {
+  display: none;
+}
+
+.channel-message:hover .channel-message__timestamp--onHover {
+  display: block;
+}
+
+.channel-message__text {
+  color: rgb(29, 28, 29);
+  font-size: 15px;
+  font-weight: 400;
+}
