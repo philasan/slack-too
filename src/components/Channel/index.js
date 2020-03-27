@@ -1,7 +1,8 @@
 import React from 'react';
 import moment from 'moment';
-import './Channel.css';
 import ChannelMessage from '../ChannelMessage';
+import ChannelInput from '../ChannelInput';
+import './Channel.css';
 
 function Channel({ channel }) {
   const { name, topic, messages } = channel;
@@ -10,11 +11,12 @@ function Channel({ channel }) {
   let lastUserTime = 0;
   let shouldMessageShowUser = false;
   const sortedMessages = messages.sort((a,b) => a.createdAt - b.createdAt);
+  const messagesElements = [];
 
-  const messagesElements = sortedMessages.map(({ user, message, createdAt}) => {
+  for (let i = 0; i <= sortedMessages.length - 1; i++) {
+    const { user, message, createdAt } = sortedMessages[i];
     const thisMoment = moment(createdAt);
     const messageDate = thisMoment.date();
-    let dateDivider;
 
     shouldMessageShowUser = false;
     if (lastUser !== user.id) {
@@ -41,28 +43,25 @@ function Channel({ channel }) {
           break;
       }
 
-      dateDivider = (
-        <div className="channel-messages__date-divider">
+      messagesElements.push((
+        <div key={`${user.id}-${thisMoment}`} className="channel-messages__date-divider">
           <div className="channel-messages__date-label">{label}</div>
         </div>
-      );
+      ));
     }
 
-    lastUserTime = createdAt;
-
-    return (
-      <>
+    messagesElements.push(
       <ChannelMessage
-        key={user.id + createdAt}
+        key={`${user.id}-${i}`}
         user={user}
         message={message}
         createdAt={createdAt}
         shouldShowUser={shouldMessageShowUser}
       />
-      {dateDivider}
-      </>
     );
-  });
+
+    lastUserTime = createdAt;
+  }
 
   return (
     <div className="channel">
@@ -95,7 +94,7 @@ function Channel({ channel }) {
       <div className="channel-messages">
         {messagesElements.reverse()}
       </div>
-      <div>INPUT COMPONENT</div>
+      <ChannelInput channelName={name} />
     </div>
   );
 }
