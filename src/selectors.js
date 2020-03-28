@@ -7,16 +7,21 @@ const messagesSliceSelector = (state) => state.messages;
 
 const uiSliceSelector = (state) => state.ui;
 
+export const selectedChannelNameSelector = createSelector(
+  uiSliceSelector,
+  (ui) => ui.selectedChannelName,
+);
+
 export const selectedChannelSelector = createSelector(
   channelsSliceSelector,
-  uiSliceSelector,
-  (channels, ui) => channels[ui.selectedChannel],
+  selectedChannelNameSelector,
+  (channels, selectedChannelName) => channels[selectedChannelName],
 );
 
 export const messagesForSelectedChannelSelector = createSelector(
-  selectedChannelSelector,
   messagesSliceSelector,
-  (channel, messagesSlice) => messagesSlice[channel.name],
+  selectedChannelNameSelector,
+  (messagesSlice, selectedChannelName) => messagesSlice[selectedChannelName],
 );
 
 export const channelSelector = (state, { channel }) => state.channels[channel];

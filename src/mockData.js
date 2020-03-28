@@ -40,7 +40,7 @@ for (const channelName in mockChannels) {
       messages.push({
         user: { username: 'philasan', id: 123 },
         message: faker.lorem.sentence(),
-        createdAt: faker.date.recent(3),
+        createdAt: faker.date.recent(3).getTime(),
       });
     }
 

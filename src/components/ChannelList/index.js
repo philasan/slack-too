@@ -3,24 +3,25 @@ import classNames from 'classnames';
 
 import './ChannelList.css';
 
-function ChannelList({ channels, selectChannel }) {
+function ChannelList({ channels, selectChannel, selectedChannelName }) {
 
   const [collapse, setCollapse] = useState(false);
-  const [selectedChannelIndex, setSelectedChannelIndex] = useState(null);
+  // const [selectedChannelIndex, setSelectedChannelIndex] = useState(null);
 
-  const toggleSelectedChannelIndex = (index) => {
-    if (selectedChannelIndex === index) {
-      setSelectedChannelIndex(null);
+  const toggleSelectedChannelName = (name) => {
+    if (selectedChannelName === name) {
+
     } else {
-      setSelectedChannelIndex(index);
-      selectChannel(channels[index].name);
+
+      selectChannel(name);
     }
   };
 
   let channelsElements = channels.map((channel, index) => {
+    let channelName = channel.name;
     let style = classNames(
       'sidebar-channel',
-      { 'sidebar-channel--selected': selectedChannelIndex === index },
+      { 'sidebar-channel--selected': selectedChannelName === channelName },
     );
 
     let channelIcon;
@@ -40,10 +41,10 @@ function ChannelList({ channels, selectChannel }) {
       <li
         key={index}
         className={style}
-        onClick={() => toggleSelectedChannelIndex(index)}
+        onClick={() => toggleSelectedChannelName(channelName)}
       >
         {channelIcon}
-        <span className="sidebar-channel-name">{channel.name.replace('#', '')}</span>
+        <span className="sidebar-channel-name">{channelName.replace('#', '')}</span>
       </li>
     );
   });

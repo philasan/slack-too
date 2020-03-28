@@ -1,6 +1,5 @@
 import React from 'react';
 import moment from 'moment';
-import _ from 'lodash';
 import ChannelMessage from '../ChannelMessage';
 import ChannelInput from '../ChannelInput';
 import './Channel.css';
@@ -11,11 +10,11 @@ function Channel({ channel, messages }) {
   let lastUser;
   let lastUserTime = 0;
   let shouldMessageShowUser = false;
-  const sortedMessages = _.sortBy(messages, (message) => message.createdAt);
+
   const messagesElements = [];
 
-  for (let i = 0; i <= sortedMessages.length - 1; i++) {
-    const { user, message, createdAt } = sortedMessages[i];
+  for (let i = 0; i <= messages.length - 1; i++) {
+    const { user, message, createdAt } = messages[i];
     const thisMoment = moment(createdAt);
     const messageDate = thisMoment.date();
 

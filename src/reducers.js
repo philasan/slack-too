@@ -19,11 +19,11 @@ export const messages = createSlice({
 export const ui = createSlice({
   name: 'ui',
   initialState: {
-    selectedChannel: '#general',
+    selectedChannelName: '#general',
   },
   reducers: {
     selectChannel: (state, { payload }) => {
-      state.selectedChannel = payload;
+      state.selectedChannelName = payload;
     },
   },
   extraReducers:{},
