@@ -29,6 +29,17 @@ export const mockChannels = {
   },
 };
 
+export const mockUsers = [];
+
+for (let i = 0, length = faker.random.number({ min: 9, max: 20 }); i < length; i++) {
+  mockUsers.push({
+    username: faker.internet.userName(),
+    id: i,
+    avatar: faker.image.avatar(),
+    email: faker.internet.email(),
+  });
+}
+
 export const mockMessages = {};
 
 for (const channelName in mockChannels) {
@@ -38,7 +49,7 @@ for (const channelName in mockChannels) {
 
     for (let i = 0; i < length; i++) {
       messages.push({
-        user: { username: 'philasan', id: 123 },
+        user: _.sample(mockUsers),
         message: faker.lorem.sentence(),
         createdAt: faker.date.recent(3).getTime(),
       });
