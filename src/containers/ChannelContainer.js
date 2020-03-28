@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Channel from '../components/Channel';
-import { channelSelector, messagesByChannelSelector } from '../selectors';
+import { selectedChannelSelector, messagesForSelectedChannelSelector } from '../selectors';
 
 function ChannelContainer(props) {
   return (<Channel {...props} />);
@@ -10,8 +10,8 @@ function ChannelContainer(props) {
 
 const mapStateToProps = (state) => {
   return {
-    channel: channelSelector(state, { channel: '#general' }),
-    messages: messagesByChannelSelector(state, { channel: '#general' }),
+    channel: selectedChannelSelector(state),
+    messages: messagesForSelectedChannelSelector(state),
   };
 }
 

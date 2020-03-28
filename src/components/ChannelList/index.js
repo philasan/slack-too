@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import './ChannelList.css';
 
-function ChannelList({ channels }) {
+function ChannelList({ channels, selectChannel }) {
 
   const [collapse, setCollapse] = useState(false);
   const [selectedChannelIndex, setSelectedChannelIndex] = useState(null);
@@ -13,6 +13,7 @@ function ChannelList({ channels }) {
       setSelectedChannelIndex(null);
     } else {
       setSelectedChannelIndex(index);
+      selectChannel(channels[index].name);
     }
   };
 

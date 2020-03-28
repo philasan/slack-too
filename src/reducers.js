@@ -16,7 +16,21 @@ export const messages = createSlice({
   extraReducers: {},
 });
 
+export const ui = createSlice({
+  name: 'ui',
+  initialState: {
+    selectedChannel: '#general',
+  },
+  reducers: {
+    selectChannel: (state, { payload }) => {
+      state.selectedChannel = payload;
+    },
+  },
+  extraReducers:{},
+});
+
 export default combineReducers({
   channels: channels.reducer,
   messages: messages.reducer,
+  ui: ui.reducer,
 });
