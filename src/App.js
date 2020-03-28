@@ -1,11 +1,11 @@
 import React from 'react';
 
 import './App.css';
-import ChannelList from './components/ChannelList';
-import Channel from './components/Channel';
+import ChannelList from './containers/ChannelListContainer';
+// import Channel from './components/Channel';
+import Channel from './containers/ChannelContainer';
 
 function App() {
-
 
   const messages = [
     {
@@ -78,9 +78,9 @@ She depends on you, she depends on you`,
       <div className="search-bar"></div>
       <div className="app-container">
         <div className="sidebar">
-          <ChannelList channels={channels} />
+          <ChannelList />
         </div>
-        <Channel channel={channels[0]} />
+        <Channel />
       </div>
     </div>
   );

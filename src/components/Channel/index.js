@@ -1,16 +1,17 @@
 import React from 'react';
 import moment from 'moment';
+import _ from 'lodash';
 import ChannelMessage from '../ChannelMessage';
 import ChannelInput from '../ChannelInput';
 import './Channel.css';
 
-function Channel({ channel }) {
-  const { name, topic, messages } = channel;
+function Channel({ channel, messages }) {
+  const { name, topic } = channel;
   const memberCount = 1;
   let lastUser;
   let lastUserTime = 0;
   let shouldMessageShowUser = false;
-  const sortedMessages = messages.sort((a,b) => a.createdAt - b.createdAt);
+  const sortedMessages = _.sortBy(messages, (message) => message.createdAt);
   const messagesElements = [];
 
   for (let i = 0; i <= sortedMessages.length - 1; i++) {

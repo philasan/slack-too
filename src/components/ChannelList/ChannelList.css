@@ -60,10 +60,23 @@
   background-color: rgb(17, 100, 163);
 }
 
-.sidebar-channel-name:before {
+.sidebar-channel-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sidebar-channel__icon {
+  fill: white;
+  height: 16px;
+  padding-right: 6px;
+  text-align: center;
+  width: 16px;
+}
+/* .sidebar-channel-name:before {
   content: "#";
   padding-right: 6px;
-}
+} */
 
 .sidebar-channels-list--collapsed .sidebar-channel {
   display: none;

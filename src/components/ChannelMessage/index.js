@@ -17,7 +17,7 @@ function ChannelMessage({ user, message, createdAt, shouldShowUser=false }) {
             <div className="channel-message__header">
               <span className="channel-message__username">{user.username}</span>
               <span className="channel-message__timestamp">
-                {timestamp.format('H:mm')}<span className="channel-message__ampm">&nbsp;{timestamp.format("A")}</span>
+                {timestamp.format('h:mm')}<span className="channel-message__ampm">&nbsp;{timestamp.format("A")}</span>
               </span>
             </div>
             <div className="channel-message__text">{message}</div>
@@ -29,7 +29,7 @@ function ChannelMessage({ user, message, createdAt, shouldShowUser=false }) {
     return (
       <div className="channel-message channel-message--continued">
         <div className="channel-message__gutter">
-          <span className="channel-message__timestamp channel-message__timestamp--onHover">{timestamp.format('H:mm')}</span>
+          <span className="channel-message__timestamp channel-message__timestamp--onHover">{timestamp.format('h:mm')}</span>
         </div>
         <div className="channel-message__content">
           <div className="channel-message__text">{message}</div>
