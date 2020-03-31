@@ -30,7 +30,7 @@ function ChannelInput({
 
   const handleSubmit = (e) => {
     createMessage(selectedChannelName, {
-      user: currentUser,
+      userId: currentUser.id,
       message: message,
       createAt: new Date().getTime(),
     });

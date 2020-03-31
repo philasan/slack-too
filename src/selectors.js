@@ -28,7 +28,11 @@ export const selectedChannelSelector = createSelector(
 export const messagesForSelectedChannelSelector = createSelector(
   messagesSliceSelector,
   selectedChannelNameSelector,
-  (messagesSlice, selectedChannelName) => messagesSlice[selectedChannelName],
+  userSliceSelector,
+  (messages, selectedChannelName, users) => messages[selectedChannelName].map((message) => ({
+    ...message,
+    user: users[message.userId],
+  })),
 );
 
 export const channelSelector = (state, { channel }) => state.channels[channel];

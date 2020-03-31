@@ -56,7 +56,7 @@ for (const channelName in mockChannels) {
 
     for (let i = 0; i < length; i++) {
       messages.push({
-        user: _.sample(mockUsers),
+        userId: _.sample(mockUsers).id,
         message: faker.lorem.sentence(),
         createdAt: faker.date.recent(3).getTime(),
       });
