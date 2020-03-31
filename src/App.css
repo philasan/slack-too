@@ -29,7 +29,7 @@ ul {
 }
 
 .search-bar {
-  background-color: rgb(63, 14, 64);
+  background-color: #350D36;
   height: 40px;
   flex: 0 0 auto;
 }
@@ -42,7 +42,8 @@ ul {
 
 .sidebar {
   background-color: rgb(63, 14, 64);
-  font-size: 15px;
   color: rgb(207,195,207);
+  flex: 0 0 auto;
+  font-size: 15px;
   width: 220px;
 }

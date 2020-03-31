@@ -9,10 +9,7 @@ function ChannelList({ channels, selectChannel, selectedChannelName }) {
   // const [selectedChannelIndex, setSelectedChannelIndex] = useState(null);
 
   const toggleSelectedChannelName = (name) => {
-    if (selectedChannelName === name) {
-
-    } else {
-
+    if (selectedChannelName !== name) {
       selectChannel(name);
     }
   };

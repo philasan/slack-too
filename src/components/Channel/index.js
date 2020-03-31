@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import ChannelMessage from '../ChannelMessage';
-import ChannelInput from '../ChannelInput';
+import ChannelInput from '../../containers/ChannelInputContainer';
 import './Channel.css';
 
 function Channel({ channel, messages }) {
@@ -94,7 +94,7 @@ function Channel({ channel, messages }) {
       <div className="channel-messages">
         {messagesElements.reverse()}
       </div>
-      <ChannelInput channelName={name} />
+      <ChannelInput />
     </div>
   );
 }

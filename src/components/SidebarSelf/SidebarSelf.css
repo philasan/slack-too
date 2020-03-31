@@ -1,0 +1,65 @@
+.sidebar-self {
+  align-items: center;
+  border-top: 1px solid rgb(82, 38, 83);
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.sidebar-self:hover {
+  background-color: #350D36;
+}
+
+.sidebar-self__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar-self__group {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-weight: 700;
+}
+
+.sidebar-self__arrow-icon {
+  fill: white;
+  height: 18px;
+  width: 18px;
+}
+
+.sidebar-self__createMessage {
+  align-items: center;
+  background-color: white;
+  border-radius: 18px;
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  width: 36px;
+}
+
+.sidebar-self__icon {
+  fill: rgb(63, 14, 64);
+  width: 20px;
+}
+
+.sidebar-self__name {
+  align-items: center;
+  display: flex;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.sidebar-self__connection {
+  height: 8px;
+  width: 8px;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+
+.sidebar-self__connection--online {
+  background-color: #2BAC76;
+}

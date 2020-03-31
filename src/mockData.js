@@ -29,15 +29,22 @@ export const mockChannels = {
   },
 };
 
-export const mockUsers = [];
+export const mockUsers = {
+  self: {
+    username: "Me",
+    id: 'self',
+    avatar: faker.image.avatar(),
+    email: faker.internet.email(),
+  },
+};
 
 for (let i = 0, length = faker.random.number({ min: 9, max: 20 }); i < length; i++) {
-  mockUsers.push({
+  mockUsers[i] = {
     username: faker.internet.userName(),
     id: i,
     avatar: faker.image.avatar(),
     email: faker.internet.email(),
-  });
+  };
 }
 
 export const mockMessages = {};

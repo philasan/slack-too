@@ -7,6 +7,13 @@ const messagesSliceSelector = (state) => state.messages;
 
 const uiSliceSelector = (state) => state.ui;
 
+const userSliceSelector = (state) => state.users;
+
+export const currentUserSelector = createSelector(
+  userSliceSelector,
+  (users) => users.self,
+);
+
 export const selectedChannelNameSelector = createSelector(
   uiSliceSelector,
   (ui) => ui.selectedChannelName,

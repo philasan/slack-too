@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './ChannelInput.css';
 
-function ChannelInput({ channelName }) {
+function ChannelInput({
+  createMessage,
+  currentUser,
+  selectedChannelName
+}) {
   const [message, setMessage] = useState('');
   const [hasFocus, setHasFocus] = useState(false);
   const inputEl = useRef(null);
@@ -25,10 +29,14 @@ function ChannelInput({ channelName }) {
   };
 
   const handleSubmit = (e) => {
-    console.log(message);
+    createMessage(selectedChannelName, {
+      user: currentUser,
+      message: message,
+      createAt: new Date().getTime(),
+    });
     setMessage('');
     e.preventDefault();
-  }
+  };
 
   return (
     <>
@@ -38,7 +46,7 @@ function ChannelInput({ channelName }) {
         onBlur={() => setHasFocus(false)}
         onChange={handleMessage}
         onFocus={() => setHasFocus(true)}
-        placeholder={`Message ${channelName}`}
+        placeholder={`Message ${selectedChannelName}`}
         ref={inputEl}
         value={message}
       />

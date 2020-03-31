@@ -1,6 +1,7 @@
 import React from 'react';
 import ChannelList from './containers/ChannelListContainer';
 import Channel from './containers/ChannelContainer';
+import SidebarSelf from './components/SidebarSelf';
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <div className="search-bar"></div>
       <div className="app-container">
         <div className="sidebar">
+          <SidebarSelf />
           <ChannelList />
         </div>
         <Channel />
