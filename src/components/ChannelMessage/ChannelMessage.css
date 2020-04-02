@@ -11,6 +11,7 @@
   min-width: 36px;
   padding-right: 8px;
   text-align: right;
+  position: relative;
 }
 .channel-message--continued .channel-message__gutter {
   min-height: 0;

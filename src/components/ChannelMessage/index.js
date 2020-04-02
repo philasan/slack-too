@@ -1,10 +1,17 @@
 import React from 'react';
 import moment from 'moment';
 import './ChannelMessage.css';
+import UserCard from '../../containers/UserCardContainer';
+import Hoverable from '../Hoverable';
 
 function ChannelMessage({ user, message, createdAt, shouldShowUser=false }) {
   const timestamp = moment(createdAt);
-  let userImg = (<img src={user.avatar} className="channel-message__userImg" alt={`${user.username}'s avatar`} />) || (<svg className="channel-message__userImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>)
+  const avatarImage = (user.avatar) ? (<img src={user.avatar} className="channel-message__userImg" alt={`${user.username}'s avatar`} />) : (<svg className="channel-message__userImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>);
+  let userImg = (
+    <Hoverable userId={user.id}>
+      {avatarImage}
+    </Hoverable>
+  );
 
   if (shouldShowUser) {
       return (

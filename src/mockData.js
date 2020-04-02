@@ -51,7 +51,7 @@ export const mockMessages = {};
 
 for (const channelName in mockChannels) {
   if (mockChannels.hasOwnProperty(channelName)) {
-    const length = faker.random.number({ min: 9, max: 20 });
+    const length = faker.random.number({ min: 12, max: 30 });
     const messages = [];
 
     for (let i = 0; i < length; i++) {

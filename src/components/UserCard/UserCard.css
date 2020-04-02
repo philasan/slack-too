@@ -1,0 +1,69 @@
+.user-card {
+  display: flex;
+  position: absolute;
+  background-color: white;
+  left: 0;
+  top: 0;
+  margin-left: 42px;
+  border-radius: 8px;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, .75), 0 2px 6px 0 rgba(0, 0, 0, .1);
+  width: 300px;
+  flex-direction: column;
+  text-align: left;
+  overflow: hidden;
+}
+
+.user-card__image {
+  height: 260px;
+  width: 300px;
+  background-color: #CCC;
+  object-fit: cover;
+}
+
+.user-card__name {
+  font-weight: 700;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.user-card__status {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+  box-sizing: border-box;
+  border: 1px solid rgb(100, 100, 100);
+}
+
+.user-card__status--online {
+  background: #2BAC76;
+  border-color: #2BAC76;
+}
+
+.user-card__localtime {
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(100, 100, 100);
+}
+
+.user-card__time {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(29, 28, 29);
+}
+
+.user-card__contact-buttons {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+}
+
+.user-card__button {
+  border: 1px solid rgb(180, 180, 180);
+  height: 35px;
+  width: 120px;
+  border-radius: 4px;
+}

@@ -9,6 +9,8 @@ const uiSliceSelector = (state) => state.ui;
 
 const userSliceSelector = (state) => state.users;
 
+export const userSelector = (state, { userId }) => state.users[userId];
+
 export const currentUserSelector = createSelector(
   userSliceSelector,
   (users) => users.self,

@@ -7,7 +7,6 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div className="search-bar"></div>
       <div className="app-container">
         <div className="sidebar">
           <SidebarSelf />
