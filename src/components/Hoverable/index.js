@@ -1,6 +1,5 @@
 import React, { useCallback, useState, useEffect, useRef } from 'react';
 import UserCard from '../../containers/UserCardContainer';
-import _ from 'lodash';
 
 function Hoverable(props) {
   const [showCard, setShowCard] = useState(false) ;

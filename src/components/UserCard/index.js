@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 import './UserCard.css';
-import classNames from 'classnames';
 
 function UserCard({ userId, user }) {
   return (

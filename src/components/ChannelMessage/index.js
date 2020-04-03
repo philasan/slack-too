@@ -1,7 +1,6 @@
 import React from 'react';
 import moment from 'moment';
 import './ChannelMessage.css';
-import UserCard from '../../containers/UserCardContainer';
 import Hoverable from '../Hoverable';
 
 function ChannelMessage({ user, message, createdAt, shouldShowUser=false }) {
