@@ -47,3 +47,24 @@ ul {
   font-size: 15px;
   width: 220px;
 }
+
+.sidebar__search {
+  margin: 4px 12px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+}
+
+.sidebar__search:hover {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.sidebar__icon {
+  fill: rgba(255, 255, 255, .8);
+  height: 18px;
+  width: 18px;
+  margin-right: 4px;
+  margin: 0 2px;
+}

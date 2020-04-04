@@ -1,6 +1,6 @@
 .sidebar-self {
   align-items: center;
-  border-top: 1px solid rgb(82, 38, 83);
+  /* border-top: 1px solid rgb(82, 38, 83); */
   display: flex;
   height: 60px;
   justify-content: space-between;

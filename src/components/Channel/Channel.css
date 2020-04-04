@@ -96,6 +96,8 @@
   padding-right: 10px;
 }
 
+
+
 .channel-header__details:hover {
   background-color: rgb(245, 245, 245);
   color: black;
@@ -132,4 +134,26 @@
   font-size: 13px;
   font-weight: 600;
   background-color: white;
+}
+
+.channel-header__search {
+  padding: 6px 8px;
+  margin-right: 8px;
+  border: 1px solid rgb(200, 200, 200);
+  color: rgb(160, 160, 160);
+  border-radius: 4px;
+  min-width: 100px;
+}
+
+.channel-header__search:hover {
+  border-color: rgb(100, 100, 100);
+  color: rgb(18, 100, 163);
+}
+
+.channel-header__icon--search {
+  margin-right: 6px;
+}
+
+.channel-header__search:hover .channel-header__icon--search {
+  fill:  rgb(18, 100, 163);
 }
