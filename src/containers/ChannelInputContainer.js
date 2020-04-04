@@ -19,7 +19,7 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     createMessage: (channelName, message) => dispatch(
       messages.actions.createMessage({ channelName, message })

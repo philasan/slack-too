@@ -2,10 +2,6 @@ import React from 'react';
 import './SidebarSelf.css';
 
 function SidebarSelf() {
-  const showUserModal = () => {
-    console.log('user modal button pressed');
-  }
-
   const createMessageHandler = () => {
     console.log('create message button clicked');
   };

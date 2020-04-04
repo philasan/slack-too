@@ -89,7 +89,7 @@
   flex: 1;
 }
 
-@media (width <= 960px) {
+@media (max-width: 960px) {
   .search-modal__dialog {
     left: 12px;
     right: 12px;

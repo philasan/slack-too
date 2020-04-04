@@ -15,8 +15,6 @@ const mapStateToProps = (state) => {
   };
 }
 
-const mapDispatchToProps = {};
-
 ChannelContainer.propTypes = {
   channel: PropTypes.object.isRequired,
   messages: PropTypes.array.isRequired,
@@ -24,5 +22,4 @@ ChannelContainer.propTypes = {
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
 )(ChannelContainer);
