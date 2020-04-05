@@ -16,6 +16,11 @@ export const currentUserSelector = createSelector(
   (users) => users.self,
 );
 
+export const usersSelector = createSelector(
+  userSliceSelector,
+  (users) => Object.values(users),
+);
+
 export const selectedChannelNameSelector = createSelector(
   uiSliceSelector,
   (ui) => ui.selectedChannelName,

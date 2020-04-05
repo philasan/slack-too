@@ -3,8 +3,7 @@ import ChannelList from './containers/ChannelListContainer';
 import Channel from './containers/ChannelContainer';
 import SidebarSelf from './components/SidebarSelf';
 import './App.css';
-
-import SearchModal from './components/SearchModal';
+import SearchModal from './containers/SearchModalContainer';
 
 function App() {
   const [isSearching, setIsSearching] = useState(false);

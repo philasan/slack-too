@@ -1,13 +1,13 @@
 import React, { useCallback, useState, useEffect, useRef } from 'react';
 import './SearchModal.css';
 
-import faker from 'faker';
-
-function SearchModal({ toggleSearch }) {
+function SearchModal({ toggleSearch, users }) {
   const [searchValue, setSearchValue] = useState('');
-  const users = [];
   const searchInputRef = useRef(null);
   const searchDialogRef = useRef(null);
+  const filteredUsers = users.filter(
+    ({ username }) => username.toLowerCase().includes(searchValue.toLowerCase())
+  );
 
   const onClickCallback = useCallback(
     (event) => {
@@ -44,16 +44,7 @@ function SearchModal({ toggleSearch }) {
     setSearchValue(event.target.value);
   };
 
-  for (let i = 0; i < 2; i++) {
-    users.push({
-      username: faker.internet.userName(),
-      id: i,
-      avatar: faker.image.avatar(),
-      email: faker.internet.email(),
-    });
-  }
-
-  const searchResults = users.map((user) => {
+  const searchResults = filteredUsers.map((user) => {
     return (
       <div className="search-modal__result-item" key={user.id}>
         <img className="search-modal__result-image" src={user.avatar} alt="user avatar" />
