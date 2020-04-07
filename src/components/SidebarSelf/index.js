@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import './SidebarSelf.css';
 import Dismissible from '../Dismissible';
 
@@ -49,7 +49,7 @@ function SidebarSelf() {
       className="sidebar-self__notifications-menu"
       dismiss={() => setShowNotificationPauseMenu(false)}
     >
-      <div className="sidebar-self__menu-title">Do Not Distub is ON</div>
+      <div className="sidebar-self__menu-title">Notifications are Paused</div>
       <ul className="sidebar-self_notifications-options">
         <li
           className="sidebar-self_notifications-option"
