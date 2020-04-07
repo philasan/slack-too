@@ -21,4 +21,3 @@ SearchModalContainer.propTypes = {
 export default connect(
   mapStateToProps,
 )(SearchModalContainer);
-

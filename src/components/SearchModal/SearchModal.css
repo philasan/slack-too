@@ -6,6 +6,7 @@
   right: 0;
   background-color: rgba(0 ,0, 0, .6);
   color: rgb(30, 30, 30);
+  z-index: 1;
 }
 
 .search-modal__dialog {

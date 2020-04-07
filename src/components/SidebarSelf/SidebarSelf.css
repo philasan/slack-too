@@ -1,11 +1,12 @@
 .sidebar-self {
   align-items: center;
-  /* border-top: 1px solid rgb(82, 38, 83); */
   display: flex;
   height: 60px;
   justify-content: space-between;
   padding-left: 16px;
   padding-right: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .sidebar-self:hover {
@@ -42,8 +43,8 @@
 }
 
 .sidebar-self__icon {
-  fill: rgb(63, 14, 64);
-  width: 20px;
+  fill: white;
+  width: 24px;
 }
 
 .sidebar-self__name {
@@ -62,4 +63,58 @@
 
 .sidebar-self__connection--online {
   background-color: #2BAC76;
+}
+
+.sidebar-self__notifications-button {
+  height: 24px;
+  width: 24px;
+  border-radius: 20px;
+  padding: 5px;
+  box-sizing: content-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-self__notifications-button:hover {
+  background-color: rgba(255, 255, 255, .1);
+}
+
+.sidebar-self__notifications-menu {
+  position: absolute;
+  background-color: white;
+  border-radius: 8px;
+  width: 260px;
+  padding: 16px 0;
+  top: 45px;
+  right: -210px;
+  box-shadow:
+    0 0 1px 0 rgba(0, 0, 0, .5),
+    0 0 8px 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-self__hr {
+  border: none;
+  background-color: #CCC;
+  height: 1px;
+}
+
+.sidebar-self_notifications-options {
+  list-style: none;
+}
+.sidebar-self_notifications-option {
+  font-size: 15px;
+  color: rgb(30, 30, 30);
+  padding: 6px 28px;
+}
+
+.sidebar-self_notifications-option:hover {
+  background-color: rgb(18, 100, 163);
+  color: white;
+}
+
+.sidebar-self__menu-title {
+  padding: 0 20px 4px 20px;
+  font-size: 12px;
+  color: rgb(100, 100, 100);
 }
