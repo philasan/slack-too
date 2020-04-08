@@ -85,7 +85,7 @@
   background-color: white;
   border-radius: 8px;
   width: 260px;
-  padding: 16px 0;
+  padding: 10px 0;
   top: 45px;
   right: -210px;
   box-shadow:
@@ -99,22 +99,22 @@
   height: 1px;
 }
 
-.sidebar-self_notifications-options {
+.sidebar-self__notifications-options {
   list-style: none;
 }
-.sidebar-self_notifications-option {
+.sidebar-self__notifications-option {
   font-size: 15px;
   color: rgb(30, 30, 30);
   padding: 6px 28px;
 }
 
-.sidebar-self_notifications-option:hover {
+.sidebar-self__notifications-option:hover {
   background-color: rgb(18, 100, 163);
   color: white;
 }
 
 .sidebar-self__menu-title {
-  padding: 0 20px 4px 20px;
+  padding: 6px 20px 4px 20px;
   font-size: 12px;
   color: rgb(100, 100, 100);
 }

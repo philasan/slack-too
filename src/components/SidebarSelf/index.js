@@ -31,16 +31,16 @@ function SidebarSelf() {
       dismiss={() => setShowNotificationPauseMenu(false)}
     >
       <div className="sidebar-self__menu-title">Pause Notifications</div>
-      <ul className="sidebar-self_notifications-options">
-        <li className="sidebar-self_notifications-option" onClick={turnOffNotifications}>30 minutes</li>
-        <li className="sidebar-self_notifications-option" onClick={turnOffNotifications}>1 hour</li>
-        <li className="sidebar-self_notifications-option" onClick={turnOffNotifications}>2 hours</li>
-        <li className="sidebar-self_notifications-option" onClick={turnOffNotifications}>4 hours</li>
-        <li className="sidebar-self_notifications-option" onClick={turnOffNotifications}>Until tomorrow</li>
-        <li className="sidebar-self_notifications-option" onClick={turnOffNotifications}>Until next week</li>
+      <ul className="sidebar-self__notifications-options">
+        <li className="sidebar-self__notifications-option" onClick={turnOffNotifications}>30 minutes</li>
+        <li className="sidebar-self__notifications-option" onClick={turnOffNotifications}>1 hour</li>
+        <li className="sidebar-self__notifications-option" onClick={turnOffNotifications}>2 hours</li>
+        <li className="sidebar-self__notifications-option" onClick={turnOffNotifications}>4 hours</li>
+        <li className="sidebar-self__notifications-option" onClick={turnOffNotifications}>Until tomorrow</li>
+        <li className="sidebar-self__notifications-option" onClick={turnOffNotifications}>Until next week</li>
       </ul>
       <hr className="sidebar-self__hr" />
-      <div className="sidebar-self_notifications-option" onClick={turnOffNotifications}>Do Not Disturb...</div>
+      <div className="sidebar-self__notifications-option" onClick={turnOffNotifications}>Do Not Disturb...</div>
     </Dismissible>
   );
 
@@ -50,9 +50,9 @@ function SidebarSelf() {
       dismiss={() => setShowNotificationPauseMenu(false)}
     >
       <div className="sidebar-self__menu-title">Notifications are Paused</div>
-      <ul className="sidebar-self_notifications-options">
+      <ul className="sidebar-self__notifications-options">
         <li
-          className="sidebar-self_notifications-option"
+          className="sidebar-self__notifications-option"
           onClick={turnOnNotifications}
         >Resume notifications</li>
       </ul>
