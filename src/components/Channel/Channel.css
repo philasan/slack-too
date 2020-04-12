@@ -57,6 +57,7 @@
   height: 24px;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .channel-header__topic-inner {
@@ -156,4 +157,14 @@
 
 .channel-header__search:hover .channel-header__icon--search {
   fill:  rgb(18, 100, 163);
+}
+
+@media (max-width: 720px) {
+  .channel-header__toolbar {
+    display: none;
+  }
+
+  .channel-header__details {
+    display: none;
+  }
 }

@@ -20,3 +20,16 @@ code {
 #root {
   height: 100%;
 }
+
+.non-desktop-size {
+  display: none;
+}
+
+@media (max-width: 520px) {
+  #root {
+    display: none;
+  }
+  .non-desktop-size {
+    display: block;
+  }
+}

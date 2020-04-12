@@ -23,7 +23,6 @@ function SearchModal({ toggleSearch, users }) {
       toggleSearch();
     }
     event.stopPropagation();
-    event.nativeEvent.stopImmediatePropagation();
   }
 
   // search modal constantly steals focus
