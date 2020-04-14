@@ -23,6 +23,60 @@ code {
 
 .non-desktop-size {
   display: none;
+  flex-direction: column;
+}
+
+.non-desktop-size__get-app {
+  align-items: center;
+  margin: 20px;
+  box-shadow:
+    0 0 1px 0 rgba(0, 0, 0, .7),
+    0 2px 0 0 rgba(0, 0, 0, .1);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  padding: 20px;
+  font-size:  15px;
+  color: rgb(100, 100, 100);
+}
+
+.non-desktop-size__title {
+  color: rgb(30, 30, 30);
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.non-desktop-size__badge {
+  margin: 10px;
+}
+.non-desktop-size__badge--apple {
+  height: 50px;
+}
+.non-desktop-size__badge--google {
+  height: 70px;
+}
+
+.non-desktop-size__open-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.non-desktop-size__open-slack-button {
+  background-color: green;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  padding: 8px 20px 8px 10px;
+}
+
+.non-desktop-size__icon {
+  height: 30px;
 }
 
 @media (max-width: 520px) {
@@ -30,6 +84,6 @@ code {
     display: none;
   }
   .non-desktop-size {
-    display: block;
+    display: flex;
   }
 }

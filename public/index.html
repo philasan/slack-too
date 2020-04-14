@@ -39,7 +39,24 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <div class="non-desktop-size">
-      This is for mobile devices
+      <div class="non-desktop-size__get-app">
+        <h2 class="non-desktop-size__title">Get the Slack app</h2>
+        <img class="non-desktop-size__badge non-desktop-size__badge--apple" src="%PUBLIC_URL%/apple_badge.svg" />
+        <img class="non-desktop-size__badge non-desktop-size__badge--google" src="%PUBLIC_URL%/google_badge.png" />
+
+        <p><strong>Your sign-in details:</strong></p>
+        <div>Domain: <strong>workspace.slack.com</strong></div>
+        <div>Email: <strong>user@mockData.com</strong></div>
+      </div>
+
+      <div class="non-desktop-size__open-app">
+        <p><strong>Have the app already?</strong></p>
+        <button class="non-desktop-size__open-slack-button">
+          <img class="non-desktop-size__icon" src="%PUBLIC_URL%/Slack_Mark_Monochrome_White.svg" />
+          Open Slack
+        </button>
+        <p><a href="#">View account and workspace settings</a></p>
+    </div>
     </div>
   </body>
 </html>
