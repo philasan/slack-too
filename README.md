@@ -18,11 +18,11 @@ I've recreated Slack's basic layout and a few of its most basic functions in reg
 An very cool UX feature in Slack is the way it makes messaging so easy. From anywhere in the application, if you start typing, your keystrokes will instantly appear in the input component at the bottom of the messages. This isn't normal behavior for an input component that doesn't have focus.
 
 ### Conflicts between inputs
-Recreating that UX was simple at first. I had the `ChannelInput` component add an event listener that fired upon any keyboard strokes. If the input didn't have focus, it would take it. But this became problematic when I introduced another component with an input field, the `SearchModal`.
+Recreating that UX was simple at first. I had the `ChannelInput` component add an event listener that fired upon any keyboard strokes. If the input didn't have focus, it would take it. But this became problematic when I introduced the `SearchModal` component, which also had an input field.
 
 At first I thought I could simply solve this by calling `preventDefault` in the `SearchModal` but I learned that it only stops the browsers default behavior but not the bubbling up of the event. Since I installed `ChannelInput`'s event listener on document (so that it could steal focus from anywhere in the app) the event would eventually bubble up to it and steal focus and the keypresses fromt the `SearchModal`.
 
-Instead I call `stopPropagation` to prevent the event from bubbling. It works in this situation since the `SearchModal` is takes all the focus on the screen anyway.
+Instead I call `stopPropagation` to prevent the event from bubbling. It works for this situation since the `SearchModal`, when presented, is supposed to take all the focus on the screen anyway.
 
 
 # Components
