@@ -3,7 +3,7 @@ Slack Too! is an approximation of Slack, built with [React](https://reactjs.org/
 
 # Slack Too!
 
-The app is deployed on Heroku at [https://slack-too.herokuapp.com/](https://slack-too.herokuapp.com/) but it's currently being hosted on a Free dyno which goes to sleep after a period of inactivity.
+The app is hosted for free on Heroku at [https://slack-too.herokuapp.com/](https://slack-too.herokuapp.com/) so the initial load time might be slow. Heroku Free dyno go to sleep after a period of inactivity and take about 30 sec to spin back up.
 
 
 ## Overview
